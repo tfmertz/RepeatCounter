@@ -4,8 +4,9 @@
 
         function countRepeats($input_word, $string_to_search) {
 
-            //create a new array of each word from the sentence
-            $list_of_words = explode(" ", $string_to_search);
+            //pass splitPunctuation on the string so we are returned an array
+            //with words and trailing punctation separately
+            $list_of_words = $this->splitPunctuation($string_to_search);
 
             //make our input string lowercase
             $input_word = strtolower($input_word);
@@ -16,13 +17,6 @@
             //loop through the list of words and find if there's a match
             foreach($list_of_words as $word)
             {
-                //check if the last letter of the word is punctuation
-                if(fnmatch("[^a-zA-Z]", substr($word, -1)))
-                {
-                    //take out the punctuation
-                    $word = substr($word, 0, -1);
-                }
-
                 if($input_word == strtolower($word)) {
                     $count++;
                 }
@@ -31,20 +25,22 @@
             return $count;
         }
 
-        //NOT USED IN countRepeats FUNCTION AT ALL, PURELY USED FOR TWIG OUTPUT
-
         //Split a string into an array with punctuation saved as elements
-        //input: a string
-        //output: an array of strings
+        //Ex input: a string "I, am."
+        //Ex output: an array of strings ["I", ",", "am", "."]
+
+        //Solves the problem of not being able to highlight word matches
+        //in twig if they are followed by trailing punctuation
+        //Ex. "dog," or "dog." or "dog!"
         function splitPunctuation($input_string) {
 
-            //put the string into an array word by word including punctuation
+            //put the string into an array word by word
             $list_of_words = explode(" ", $input_string);
 
             //make an empty array to push our words and punctuation to separately
             $words_punctuation_list = array();
 
-            //loop through our words, some may be containing punctuation
+            //loop through our words, some may contain punctuation
             foreach($list_of_words as $word) {
 
                 //check if the last letter of the word is punctuation
@@ -55,6 +51,7 @@
                     //push the punctuation to our array
                     array_push($words_punctuation_list, substr($word, -1));
                 } else {
+                    //just push the word
                     array_push($words_punctuation_list, $word);
                 }
             }
