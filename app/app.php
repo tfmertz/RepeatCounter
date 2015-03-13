@@ -26,6 +26,9 @@
         //and pass it to our method
         $count_number = $repeatCounter->countRepeats($input_word, $input_sentence);
 
+        //explode the sentence so we can display formated results with twig highlighting matched word
+        $input_sentence = explode(" ", $input_sentence);
+
         //pass twig our word, sentence and count
         return $app['twig']->render('results.twig', array('word' => $input_word, 'sentence' => $input_sentence, 'count' => $count_number));
 

@@ -16,7 +16,24 @@
           <div class="jumbotron">
             <h1>Results: </h1>
             <hr>
-            <h3>You picked the word <b>{{word}}</b> to find in the sentence <b>{{sentence}}</b></h3>
+            <h3>You picked the word <b>{{word}}</b> to find in the sentence
+
+              <b>
+                {% for sentence_word in sentence %}
+                  {% if sentence_word is same as(word) %}
+
+                    <span class="text-success">{{sentence_word}}</span>
+
+                  {% else %}
+
+                    {{sentence_word}}
+
+                  {% endif %}
+
+                {% endfor %}
+              </b>
+
+            </h3>
 
             <br><br>
 
