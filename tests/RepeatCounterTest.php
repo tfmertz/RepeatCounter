@@ -171,9 +171,9 @@
         }
 
         /*
-        Input: "bat", "I have a bat, mitt, and hat."
-        Output: 1
-        Spec: Input the word "bat" and the sentence "I have a bat, mitt, and hat." because it has a list of words separated by a comma, find the matches regardless of any sentence punctuation
+        Input: "I, am"
+        Output: ["I", ",", "am"]
+        Spec: Input the string "I, am" because it has a comma after a word, and output the array with the comma added ["I", ",", "am"]
         */
         function test_splitPunctuation_onePunctuation()
         {
@@ -183,6 +183,21 @@
             $result = $test_RepeatCounter->splitPunctuation($input1);
 
             $this->assertEquals(["I", ",", "am"], $result);
+        }
+
+        /*
+        Input: "I have a red hat, green hat."
+        Output: ["I", "have", "a", "red", "hat", ",", "green", "hat", "."]
+        Spec: Input the string because it has a comma and period after a word, and output the array with the punctuation added
+        */
+        function test_splitPunctuation_twoPunctuation()
+        {
+            $test_RepeatCounter = new RepeatCounter();
+            $input1 = "I have a red hat, green hat.";
+
+            $result = $test_RepeatCounter->splitPunctuation($input1);
+
+            $this->assertEquals(["I", "have", "a", "red", "hat", ",", "green", "hat", "."], $result);
         }
     }
 
