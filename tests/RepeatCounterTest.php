@@ -122,16 +122,16 @@
         }
 
         /*
-        Input: "LiZaRd", "The lizard's name was LIZARD"
+        Input: "LiZaRd", "The lizard has a name that was LIZARD"
         Output: 4
-        Spec: Input the word "LiZaRd" and the sentence "The lizard's name was LIZARD" because there are case mismatch issues. Out the number of "LiZaRd" regardless of case, which is 2
+        Spec: Input the word "LiZaRd" and the sentence "The lizard had a name that was LIZARD" because there are case mismatch issues. Out the number of "LiZaRd" regardless of case, which is 2
         */
 
         function test_countRepeats_caseMismatchInput()
         {
             $test_RepeatCounter = new RepeatCounter();
             $input1 = "LiZaRd";
-            $input2 = "The lizard's name was LIZARD";
+            $input2 = "The lizard has a name that was LIZARD";
 
             $result = $test_RepeatCounter->countRepeats($input1, $input2);
 
