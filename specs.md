@@ -14,9 +14,9 @@
 
 ##### Spec 3
 
-*Input:* "a", "a a"
+*Input:* "c", "c c"
 *Output:* 2
-*Spec:* Input the word "a" and the sentence "a a" because there are 2 matches, find the number of times "a" occurs, which will be 2
+*Spec:* Input the word "c" and the sentence "cc" because there are 2 matches, find the number of times "c" occurs, which will be 2
 
 ##### Spec 4
 
@@ -26,24 +26,24 @@
 
 ##### Spec 5
 
-*Input:* "cat", "cat dog"
+*Input:* "dog", "cat dog"
 *Output:* 1
-*Spec:* Input the word "cat" and the sentence "cat dog", and there should be 1 match for the output
+*Spec:* Input the word "dog" and the sentence "cat dog", and there should be 1 match for the output
 
 ##### Spec 6
 
-*Input:* "cat", "The cat in the hat was a bothersome cat"
+*Input:* "frog", "The frog in the hat was a bothersome frog"
 *Output:* 2
-*Spec:* Input the word "cat" and the sentence "The cat in the hat was a bothersome cat", and find all the matches for the word, which should be two
+*Spec:* Input the word "frog" and the sentence "The frog in the hat was a bothersome frog", and find all the matches for the word, which should be two
 
 ##### Spec 7
 
-*Input:* "cat", "The cat caT CAT is a very bad cat"
+*Input:* "dino", "The dino dinO DINO was a very bad dino"
 *Output:* 4
-*Spec:* Input the word "cat" and the sentence "The cat caT CAT is a very bad cat" because there are case mismatch issues. Out the number of cats regardless of case, which is 4
+*Spec:* Input the word "dino" and the sentence "The dino dinO DINO was a very bad dino" because there are case mismatch issues. Out the number of "dino" regardless of case, which is 4
 
 ##### Spec 8
 
-*Input:* "dog", "I love my dog."
+*Input:* "puppy", "I love my puppy."
 *Output:* 1
-*Spec* Input the word "dog" and the sentence "I love my dog." because it has a period, find the matches regardless of the period at the end
+*Spec* Input the word "puppy" and the sentence "I love my puppy." because it has a period, find the matches regardless of the period at the end
