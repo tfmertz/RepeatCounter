@@ -143,6 +143,16 @@
         Output: 1
         Spec Input the word "puppy" and the sentence "I love my puppy." because it has a period, find the matches regardless of the period at the end
         */
+        function test_countRepeats_endingPeriod()
+        {
+            $test_RepeatCounter = new RepeatCounter();
+            $input1 = "puppy";
+            $input2 = "I love my puppy.";
+
+            $result = $test_RepeatCounter->countRepeats($input1, $input2);
+
+            $this->assertEquals(1, $result);
+        }
     }
 
  ?>
