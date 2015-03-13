@@ -76,6 +76,17 @@
         Spec: Input the word "dog" and the sentence "cat dog", and there should be 1 match for the output
         */
 
+        function test_countRepeats_twoWordsOneMatch()
+        {
+            $test_RepeatCounter = new RepeatCounter();
+            $input1 = "dog";
+            $input2 = "cat dog";
+
+            $result = $test_RepeatCounter->countRepeats($input1, $input2);
+
+            $this->assertEquals(1, $result);
+        }
+
         /*
         Input: "frog", "The frog in the hat was a bothersome frog"
         Output: 2
