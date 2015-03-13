@@ -110,6 +110,17 @@
         Spec: Input the word "dino" and the sentence "The dino dinO DINO was a very bad dino" because there are case mismatch issues. Out the number of "dino" regardless of case, which is 4
         */
 
+        function test_countRepeats_caseMatch()
+        {
+            $test_RepeatCounter = new RepeatCounter();
+            $input1 = "dino";
+            $input2 = "The dino dinO DINO was a very bad dino";
+
+            $result = $test_RepeatCounter->countRepeats($input1, $input2);
+
+            $this->assertEquals(4, $result);
+        }
+
         /*
         Input: "puppy", "I love my puppy."
         Output: 1
