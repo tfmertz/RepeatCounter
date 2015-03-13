@@ -153,6 +153,18 @@
 
             $this->assertEquals(1, $result);
         }
+
+
+        function test_countRepeats_listOfWords()
+        {
+            $test_RepeatCounter = new RepeatCounter();
+            $input1 = "bat";
+            $input2 = "I have a bat, mitt, and hat.";
+
+            $result = $test_RepeatCounter->countRepeats($input1, $input2);
+
+            $this->assertEquals(1, $result);
+        }
     }
 
  ?>
