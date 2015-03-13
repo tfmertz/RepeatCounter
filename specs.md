@@ -44,6 +44,13 @@
 
 ##### Spec 8
 
+
+*Input:* "LiZaRd", "The lizard's name was LIZARD"
+*Output:* 4
+*Spec:* Input the word "LiZaRd" and the sentence "The lizard's name was LIZARD" because there are case mismatch issues. Out the number of "LiZaRd" regardless of case, which is 2
+
+##### Spec 9
+
 *Input:* "puppy", "I love my puppy."
 *Output:* 1
 *Spec* Input the word "puppy" and the sentence "I love my puppy." because it has a period, find the matches regardless of the period at the end
