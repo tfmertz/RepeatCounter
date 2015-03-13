@@ -9,6 +9,16 @@
         Output: 1
         Spec: Input two strings with the letter "a" because they match, and the number of times the first "a" is found in the second, or 1
         */
+        function test_countRepeats_singleLetter()
+        {
+            $test_RepeatCounter = new RepeatCounter();
+            $input1 = "a";
+            $input2 = "a";
+
+            $result = $test_RepeatCounter->countRepeats($input1, $input2);
+
+            $this->assertEquals(1, $result);
+        }
 
         /*
         Input: "a", "a b"
