@@ -28,7 +28,6 @@
 
         //splitPunctuation so we can display formated results with twig highlighting the matched word
         $sentence_array = $repeatCounter->splitPunctuation($input_sentence);
-        var_dump($sentence_array);
 
         //pass twig our word, sentence and count
         return $app['twig']->render('results.twig', array('word' => $input_word, 'sentence' => $sentence_array, 'count' => $count_number));
