@@ -122,6 +122,23 @@
         }
 
         /*
+        Input: "LiZaRd", "The lizard's name was LIZARD"
+        Output: 4
+        Spec: Input the word "LiZaRd" and the sentence "The lizard's name was LIZARD" because there are case mismatch issues. Out the number of "LiZaRd" regardless of case, which is 2
+        */
+
+        function test_countRepeats_caseMismatchInput()
+        {
+            $test_RepeatCounter = new RepeatCounter();
+            $input1 = "LiZaRd";
+            $input2 = "The lizard's name was LIZARD";
+
+            $result = $test_RepeatCounter->countRepeats($input1, $input2);
+
+            $this->assertEquals(2, $result);
+        }
+
+        /*
         Input: "puppy", "I love my puppy."
         Output: 1
         Spec Input the word "puppy" and the sentence "I love my puppy." because it has a period, find the matches regardless of the period at the end
