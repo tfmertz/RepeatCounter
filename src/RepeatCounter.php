@@ -3,6 +3,14 @@
     class RepeatCounter {
 
         function countRepeats($input_word, $string_to_search) {
+
+            //check if the last character isn't a letter
+            if(fnmatch("[^a-zA-Z]", substr($string_to_search, -1)))
+            {
+                //take out the punctuation
+                $string_to_search = substr($string_to_search, 0, -1);
+            }
+
             //create a new array of each word from the sentence
             $list_of_words = explode(" ", $string_to_search);
 
