@@ -31,6 +31,14 @@
             return $count;
         }
 
+        //NOT USED IN countRepeats FUNCTION AT ALL, purely used for twig output
+        //Used to split a string into an array with punctuation saved as elements
+        //input: a string
+        //output: an array of strings
+        function splitPunctuation($input_string) {
+
+        }
+
     }
 
 ?>
