@@ -6,6 +6,9 @@
             //create a new array of each word from the sentence
             $list_of_words = explode(" ", $string_to_search);
 
+            //make our input string lowercase
+            $input_word = strtolower($input_word);
+
             //create a counter for the num of word matches
             $count = 0;
 
