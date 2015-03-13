@@ -16,9 +16,9 @@
           <div class="jumbotron">
             <h1>Results: </h1>
             <hr>
-            <h3>You picked the word <b>{{word}}</b> to find in the sentence <b>{{sentence}}</b>.</h3>
+            <h3>You picked the word <b>{{word}}</b> to find in the sentence <b>{{sentence}}</b></h3>
 
-            {% if count is empty %}
+            {% if count == 0 %}
 
               <br><br>
               <h4>Unfortunately, <b>{{word}}</b> <span class="text-danger">wasn't found</span> in that sentence.</h4>
@@ -27,7 +27,17 @@
 
               <h2 class="text-success">Success!</h2>
 
+              <br>
+
+              <h4>The word <b class="h2">{{word}}</b> was found <span class="text-success h2">{{count}}</span> times!</h4>
+
             {% endif %}
+
+            <hr>
+
+            <p>
+              <a href="/" class="btn btn-default">Enter a new search</a>
+            </p>
 
           </div>
 
