@@ -22,11 +22,11 @@
 
             {% if count == 0 %}
 
-              <h4>Unfortunately, <b>{{word}}</b> <span class="text-danger">wasn't found</span> in that sentence.</h4>
+              <h4>Unfortunately, <b>{{word}}</b> <span class="text-danger">was not found</span> in that sentence.</h4>
 
             {% else %}
 
-              <h4>The word <b class="h2">{{word}}</b> was found <span class="text-success h2">{{count}}</span> times!</h4>
+              <h4>The word <b class="h2">{{word}}</b> was found <span class="text-success h2">{{count}}</span> time{% if count > 1 %}s{% endif %}!</h4>
 
             {% endif %}
 
