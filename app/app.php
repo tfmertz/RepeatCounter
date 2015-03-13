@@ -19,13 +19,14 @@
 
         $repeatCounter = new RepeatCounter();
 
-        //get the information from POST and pass it to our method
+        //get the information from POST
         $input_word = $_POST['input_word'];
         $input_sentence = $_POST['input_sentence'];
 
+        //and pass it to our method
         $count_number = $repeatCounter->countRepeats($input_word, $input_sentence);
 
-        //pass twig our stats
+        //pass twig our word, sentence and count
         return $app['twig']->render('results.twig', array('word' => $input_word, 'sentence' => $input_sentence, 'count' => $count_number));
 
     });
