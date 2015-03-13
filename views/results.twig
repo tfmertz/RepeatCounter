@@ -10,9 +10,26 @@
     <div class="container">
 
       <div class="row">
-        <div class="col-md-12">
-          <h1>Your results: </h1>
 
+        <div class="col-md-12">
+
+          <div class="jumbotron">
+            <h1>Results: </h1>
+            <hr>
+            <h3>You picked the word <b>{{word}}</b> to find in the sentence <b>{{sentence}}</b>.</h3>
+
+            {% if count is empty %}
+
+              <br><br>
+              <h4>Unfortunately, <b>{{word}}</b> <span class="text-danger">wasn't found</span> in that sentence.</h4>
+
+            {% else %}
+
+              <h2 class="text-success">Success!</h2>
+
+            {% endif %}
+
+          </div>
 
 
         </div>
