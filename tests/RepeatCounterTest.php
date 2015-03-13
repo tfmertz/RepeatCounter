@@ -25,6 +25,16 @@
         Output: 1
         Spec: Input the word string with "a" and the sentence string with "a b", and find the number of times "a" occurs, which will be 1
         */
+        function test_countRepeats_twoLetters()
+        {
+            $test_RepeatCounter = new RepeatCounter();
+            $input1 = "a";
+            $input2 = "a b";
+
+            $result = $test_RepeatCounter->countRepeats($input1, $input2);
+
+            $this->assertEquals(1, $result);
+        }
 
         /*
         Input: "c", "c c"
