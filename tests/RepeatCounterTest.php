@@ -42,6 +42,17 @@
         Spec: Input the word "c" and the sentence "cc" because there are 2 matches, find the number of times "c" occurs, which will be 2
         */
 
+        function test_countRepeats_twoLettersSame()
+        {
+            $test_RepeatCounter = new RepeatCounter();
+            $input1 = "c";
+            $input2 = "c c";
+
+            $result = $test_RepeatCounter->countRepeats($input1, $input2);
+
+            $this->assertEquals(2, $result);
+        }
+
         /*
         Input: "cat", "cat"
         Output: 1
