@@ -154,7 +154,11 @@
             $this->assertEquals(1, $result);
         }
 
-
+        /*
+        Input: "bat", "I have a bat, mitt, and hat."
+        Output: 1
+        Spec: Input the word "bat" and the sentence "I have a bat, mitt, and hat." because it has a list of words separated by a comma, find the matches regardless of any sentence punctuation
+        */
         function test_countRepeats_listOfWords()
         {
             $test_RepeatCounter = new RepeatCounter();

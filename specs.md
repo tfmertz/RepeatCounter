@@ -53,10 +53,10 @@
 
 **Input:** "puppy", "I love my puppy."
 **Output:** 1
-**Spec** Input the word "puppy" and the sentence "I love my puppy." because it has a period, find the matches regardless of the period at the end
+**Spec:** Input the word "puppy" and the sentence "I love my puppy." because it has a period, find the matches regardless of the period at the end
 
 ##### Spec 9
 
 **Input:** "bat", "I have a bat, mitt, and hat."
 **Output:** 1
-**Spec** Input the word "bat" and the sentence "I have a bat, mitt, and hat." because it has a list of words separated by a comma, find the matches regardless of any sentence punctuation
+**Spec:** Input the word "bat" and the sentence "I have a bat, mitt, and hat." because it has a list of words separated by a comma, find the matches regardless of any sentence punctuation
