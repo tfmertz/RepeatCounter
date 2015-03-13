@@ -6,7 +6,32 @@
     <title>Word Counter</title>
   </head>
   <body>
-    <h1>Enter your word and sentence</h1>
+    <div class="container">
+
+      <div class="row">
+        <div class="col-md-12">
+          <h1>Enter your word and sentence</h1>
+
+          <p class="lead">
+            and the Word Counter will tell you how many times your word was found!
+          </p>
+
+        </div>
+
+        <div class="col-md-6">
+          <form action="/results" method="post">
+            <div class="form-group">
+              <label for="input_word">Word</label>
+              <input type="text" name="input_word" id="input_word" class="form-control">
+            </div>
+          </form>
+        </div>
+      </div>
+
+
+
+    </div>
+
 
   </body>
 </html>
