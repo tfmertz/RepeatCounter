@@ -93,6 +93,17 @@
         Spec: Input the word "frog" and the sentence "The frog in the hat was a bothersome frog", and find all the matches for the word, which should be two
         */
 
+        function test_countRepeats_twoWordMatch()
+        {
+            $test_RepeatCounter = new RepeatCounter();
+            $input1 = "frog";
+            $input2 = "The frog in the hat was a bothersome frog";
+
+            $result = $test_RepeatCounter->countRepeats($input1, $input2);
+
+            $this->assertEquals(2, $result);
+        }
+
         /*
         Input: "dino", "The dino dinO DINO was a very bad dino"
         Output: 4
