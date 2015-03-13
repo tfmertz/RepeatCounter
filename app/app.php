@@ -17,9 +17,16 @@
 
     $app->post('/results', function() use ($app) {
 
-        
+        $repeatCounter = new RepeatCounter();
 
-        return $app['twig']->render('results.twig');
+        //get the information from POST and pass it to our method
+        $input_word = $_POST['input_word'];
+        $input_sentence = $_POST['input_sentence'];
+
+        $count_number = $repeatCounter->countRepeats($input_word, $input_sentence);
+
+        //pass twig our stats
+        return $app['twig']->render('results.twig', array('word' => $input_word, 'sentence' => $input_sentence, 'count' => $count_number));
 
     });
 
