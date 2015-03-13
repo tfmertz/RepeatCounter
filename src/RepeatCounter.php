@@ -12,7 +12,7 @@
             //loop through the list of words and find if there's a match
             foreach($list_of_words as $word)
             {
-                if($input_word == $word) {
+                if($input_word == strtolower($word)) {
                     $count++;
                 }
             }
