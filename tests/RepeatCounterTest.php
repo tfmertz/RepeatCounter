@@ -59,6 +59,17 @@
         Spec: Input the word "cat" and the sentence "cat" because the words match, find the number of matches, which is 1
         */
 
+        function test_countRepeats_sameWord()
+        {
+            $test_RepeatCounter = new RepeatCounter();
+            $input1 = "cat";
+            $input2 = "cat";
+
+            $result = $test_RepeatCounter->countRepeats($input1, $input2);
+
+            $this->assertEquals(1, $result);
+        }
+
         /*
         Input: "dog", "cat dog"
         Output: 1
